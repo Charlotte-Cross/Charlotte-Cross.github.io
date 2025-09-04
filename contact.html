@@ -1,33 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html> lang="en">
 <head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Charlotte's teaching Portfolio - Contact me </title>
+    <title> Charli's teaching Portfolio - Contact me </title>
     <link rel="stylesheet" href="starter.css">
 </head>
-</body>
+<body>
 <!-- Main heading -->
     <header>
         <h1 style="color: #056410; "">Charli's Teaching Portfolio - Contact me</h1>
     </header>
     <!--Navigation menu section -->
-    <nav>
+<nav>
+    <div class="container">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="teaching.html">Teaching Philosphy</a></li>
             <li><a href="projects.html">Projects Showcase</a></li>
             <li><a href="worksamples.html">Samples of Work</a></li>
-            <li><a href="contact.html">Contact Me</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a class="active" href="contact.html">Contact Me</a></li>
         </ul>
-    </nav>
+    </div>
+</nav>
     <!--this is the main content area of my page, in line with semantic HTML-->
     <main>
     <!-- Contact information  -->
-        <p>Phone Number: 04********  </p>
-        <p> Email: C****************@gmail.com </p>
-        <p> School Info: ACU Strathfield, NSW </p>
+        <section class="section">
+            <h2> Get in touch </h2>
+            <form id="contact-form" action="#" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Your details </legend>
+                    <!-- Full name.-->
+                     <label for="name">Full Name</label>
+                     <input id="name" name="name" type="text" placeholder="Carlisle  Cullen" required minlength="6">
+                     <!-- email adress.-->
+                     <label for="email">Email Adress</label>
+                     <input id="email" name="email" type="email" placeholder="Carlisle.Cullen@hotmail.com" required autocomplete="email">
+                     <!-- message-->
+                     <label for="message">Message</label>
+                     <textarea id="message" name="name" type="message" placeholder="How can I help" required minlength="8"></textarea>
+                     <!--honey pot anti spam field-->
+                     <input name="honey" type="text" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;">
+                     <!--Button-->
+                     <button type="submit">Send</button>
+        </section>
     </main>
 
 <footer>
@@ -35,4 +55,5 @@
             <p> &copy; 2025 Charlotte Cross. All rights reserved.</p>
         </div>
  </footer>
-        
+</body>
+</html>
