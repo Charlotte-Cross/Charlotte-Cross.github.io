@@ -1,0 +1,78 @@
+/* === Toggle button styling === */
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: #fff;
+  z-index: 10000;
+  transition: background 0.3s, transform 0.3s;
+}
+#theme-toggle:hover {
+  background: rgba(255,255,255,0.4);
+  transform: scale(1.1);
+}
+
+/* === Light theme (default) === */
+:root[data-theme="light"] {
+  --bg-color: #f7f7f7;
+  --text-color: #1a1a1a;
+  --overlay-color: rgba(255,255,255,0.3);
+  --accent: #c94e50;
+}
+
+/* === Dark theme === */
+:root[data-theme="dark"] {
+  --bg-color: #0d0f13;
+  --text-color: #e8e8e8;
+  --overlay-color: rgba(0,0,0,0.6);
+  --accent: #7dd3fc;
+}
+
+/* === Apply colors to general elements === */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s, color 0.5s;
+}
+a, .button {
+  color: var(--accent);
+}
+
+/* === Big Picture background darkening === */
+/* These sections usually have background images */
+body[data-theme="dark"] .main {
+  position: relative;
+}
+body[data-theme="dark"] .main::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--overlay-color); /* dark overlay */
+  pointer-events: none;
+  z-index: 1;
+}
+/* Ensure text stays above overlay */
+.main .content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Optional smoother transitions */
+.main, .content, img {
+  transition: filter 0.5s, background-color 0.5s;
+}
+
+/* Visually hidden (accessible) labels */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
