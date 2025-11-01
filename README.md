@@ -1,11 +1,12 @@
 # Charlotte-Cross.github.io
 
-# Teaching Portfolio Website (COMP208 A1)
+# Teaching Portfolio Website (COMP208 A2)
 
 A straightforward portfolio made for COMP208, showing details about me and my teaching carrer/life so far. 
 It uses **semantic HTML**, **external CSS** (starter.css), and a bit of **JavaScript** to show good front-end practice. The site is hosted on  **GitHub Pages**.
+Changed layout to be similar to a HTML5 layout as well as a Canva rendition done for assessment 2. 
 
-- **Pages:** Home, About, Teaching, Samples of Work (card layout), Projects/Showcase (card layout), Resources, Resume, Contact (styled form)
+- **Pages:** Home, About, Teaching, Samples of Work (card layout), Resume and Contact (styled form)
 - **Live:** https://charlotte-cross.github.io/
 
 ## Tech
@@ -23,4 +24,4 @@ It uses **semantic HTML**, **external CSS** (starter.css), and a bit of **JavaSc
 | Muted text / secondary meta text  | `#013d0b`  | `#222222`  | **1.5:1**     | 
 
 
-_Last updated: 11 August 2025
+_Last updated: 1 Novemeber 2025
