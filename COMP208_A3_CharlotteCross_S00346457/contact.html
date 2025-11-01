@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Charli's Teaching Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <!-- Font Awesome for social icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+      <!-- Nav active highlight styles -->
+  <style>
+    /* Default nav link style */
+    #header nav ul li a {
+      padding: 0.6em 1em;
+      display: inline-block;
+      border-radius: 4px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* Light mode active link */
+    #header nav ul li a.active {
+      background: #333333;
+      color: #ffffff !important;
+    }
+
+    /* Dark mode active link */
+    html[data-theme="dark"] #header nav ul li a.active {
+      background: #ffffff;
+      color: #000000 !important;
+    }
+
+    /* Hover style (only when not active) */
+    #header nav ul li a:hover:not(.active) {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  </style>
+
+  </head>
+
+  <body class="is-preload">
+    <!-- Header -->
+    <header id="header">
+      <h1>Charli's Teaching Portfolio</h1>
+      <div class="theme-toggle-container">
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+      
+    <!--Navigation menu section -->
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="teaching.html">Teaching Philosphy</a></li>
+            <li><a href="worksamples.html">Samples of Work</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html" class="active"> Contact Me</a></li>
+        </ul>
+    </div>
+</nav>
+			</header>
+
+  <!-- Contact -->
+<section id="contact" class="main style3 secondary">
+  <div class="content">
+    <header>
+      <h2>Get in contact with me.</h2>
+      <p>Type in your name, email address and a message and I'll get back to you as soon as possible.</p>
+    </header>
+
+    <div class="box">
+      <form id="contact-form" action="https://formsubmit.co/8cc6b06c46543df294f6dcbc5dc43f5f"
+            method="POST"
+            autocomplete="on"
+            accept-charset="UTF-8">
+
+        <!-- FormSubmit settings -->
+        <input type="hidden" name="_subject" value="New message from Charli's Teaching Portfolio">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <!-- Optional: redirect page after sending -->
+        <!-- <input type="hidden" name="_next" value="https://your-site-url/thankyou.html"> -->
+
+        <!-- Honeypot field (anti-spam) -->
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off"
+               aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">
+
+        <!-- Input fields styled like Big Picture -->
+        <div class="fields">
+          <div class="field half">
+            <input id="name" name="name" type="text" placeholder="Full Name" required minlength="2">
+          </div>
+
+          <div class="field half">
+            <input id="email" name="email" type="email" placeholder="Email Address" required autocomplete="email">
+          </div>
+
+          <div class="field">
+            <textarea id="message" name="message" placeholder="Your message..." rows="6" required minlength="8"></textarea>
+          </div>
+        </div>
+
+        <!-- Submit button -->
+        <ul class="actions special">
+          <li><button type="submit" class="button primary">Send Message</button></li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+	
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="icons">
+        <li><a href="#" class="icon brands fa-twitter"></a></li>
+        <li><a href="#" class="icon brands fa-facebook-f"></a></li>
+        <li><a href="#" class="icon brands fa-instagram"></a></li>
+        <li><a href="#" class="icon brands fa-linkedin-in"></a></li>
+        <li><a href="#" class="icon brands fa-pinterest"></a></li>
+      </ul>
+	  
+      <ul class="menu">
+        <li>&copy; Charlotte Cross 2025. All rights reserved.</li>
+      </ul>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- === Theme Toggle Script === -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const themeToggle = document.getElementById("theme-toggle");
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+        themeToggle.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+
+        themeToggle.addEventListener("click", () => {
+          const currentTheme = document.documentElement.getAttribute("data-theme");
+          const newTheme = currentTheme === "dark" ? "light" : "dark";
+          document.documentElement.setAttribute("data-theme", newTheme);
+          localStorage.setItem("theme", newTheme);
+          themeToggle.textContent = newTheme === "dark" ? "☀️" : "🌙";
+        });
+      });
+    </script>
+
+<!-- Contact form JS -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contact-form');
+  if (!form) {
+    console.error('⚠️ contact-form element not found');
+    return;
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // stop the default reload
+
+    // Send the form data using Fetch
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
+        alert("✅ Thank you! Your message has been sent successfully.");
+        form.reset();
+      } else {
+        return response.text().then(text => {
+          console.error("Server response:", text);
+          alert("⚠️ Oops! Something went wrong. Please try again.");
+        });
+      }
+    })
+    .catch(error => {
+      console.error("Fetch error:", error);
+      alert("⚠️ Network error — please check your connection.");
+    });
+  });
+}); 
+</script>
+    
+	</body>
+</html>

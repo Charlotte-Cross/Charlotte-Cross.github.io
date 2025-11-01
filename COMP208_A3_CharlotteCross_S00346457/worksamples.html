@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Charli's Teaching Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <!-- Font Awesome for social icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Dark-mode fixes just for this page -->
+    <style>
+      /* Make the work section truly dark in dark mode */
+      [data-theme="dark"] #work {
+        background: #0f1115; /* near-black */
+      }
+      /* Ensure heading + paragraph are bright white and crisp */
+      [data-theme="dark"] #work .content header h2,
+      [data-theme="dark"] #work .content header p {
+        color: #ffffff !important;
+        text-shadow: none !important;
+      }
+      /* General body text inside #work section */
+      [data-theme="dark"] #work .content {
+        color: #ffffff !important;
+      }
+      /* The descriptive grey box section after the gallery */
+      [data-theme="dark"] section .content.box.style2 {
+        background: #1b1e24 !important; /* darker card */
+        color: #ffffff !important;
+      }
+      /* Links inside dark cards readable */
+      [data-theme="dark"] section .content.box.style2 a {
+        color: #a5c8ff !important;
+      }
+    </style>
+	  <!-- Nav active highlight styles -->
+  <style>
+    /* Default nav link style */
+    #header nav ul li a {
+      padding: 0.6em 1em;
+      display: inline-block;
+      border-radius: 4px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* Light mode active link */
+    #header nav ul li a.active {
+      background: #333333;
+      color: #ffffff !important;
+    }
+
+    /* Dark mode active link */
+    html[data-theme="dark"] #header nav ul li a.active {
+      background: #ffffff;
+      color: #000000 !important;
+    }
+
+    /* Hover style (only when not active) */
+    #header nav ul li a:hover:not(.active) {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  </style>
+
+  </head>
+
+  <body class="is-preload">
+    <!-- Header -->
+    <header id="header">
+      <h1>Charli's Teaching Portfolio</h1>
+      <div class="theme-toggle-container">
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+
+      <!-- Navigation -->
+      <nav>
+        <div class="container">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="teaching.html">Teaching Philosphy</a></li>
+            <li><a href="worksamples.html" class="active">Samples of Work</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Work samples -->
+    <section id="work" class="main style3 primary">
+      <div class="content">
+        <header>
+          <h2>My Work</h2>
+          <p>
+            The following images are of projects that I have completed throughout the years. 
+            Including high school and University studies.
+          </p>
+        </header>
+
+        <!-- Gallery  -->
+        <div class="gallery">
+          <article class="from-left">
+            <a href="images/leather work.jpg" class="image fit"><img src="images/leather work.jpg" title="Leather Journal" alt="Leather journal" /></a>
+          </article>
+          <article class="from-right">
+            <a href="images/coffee.jpg" class="image fit"><img src="images/coffee.jpg" title="Latte Art" alt="Latte Art work" /></a>
+          </article>
+          <article class="from-left">
+            <a href="images/year9.jpg" class="image fit"><img src="images/year9.jpg" title="Air Lounge" alt="" /></a>
+          </article>
+          <article class="from-right">
+            <a href="images/year8.jpg" class="image fit"><img src="images/year8.jpg" title="Carry on" alt="" /></a>
+          </article>
+          <article class="from-left">
+            <a href="images/Year8.2.jpg" class="image fit"><img src="images/Year8.2.jpg" title="The sparkling shell" alt="" /></a>
+          </article>
+          <article class="from-right">
+            <a href="images/year 7.jpg" class="image fit"><img src="images/year 7.jpg" title="Bent IX" alt="" /></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- brief on all the photos -->
+    <section>
+      <div class="content box style2">
+        <p>
+          My work samples feature images of projects and assignments I’ve completed throughout my degree. 
+          These include textile pieces such as a quilt and pyjamas, food design projects like a decorated cake and 
+          a themed veggie platter, and digital design tasks such as creating interactive games using electronic and 
+          design tools. Each piece showcases my practical skills, creativity, and ability to apply design thinking 
+          across different areas of Food Technology and Textiles. Together, they reflect my growth as a designer and 
+          educator, highlighting my commitment to hands-on learning and innovative classroom practice.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="icons">
+        <li><a href="#" class="icon brands fa-twitter"></a></li>
+        <li><a href="#" class="icon brands fa-facebook-f"></a></li>
+        <li><a href="#" class="icon brands fa-instagram"></a></li>
+        <li><a href="#" class="icon brands fa-linkedin-in"></a></li>
+        <li><a href="#" class="icon brands fa-pinterest"></a></li>
+      </ul>
+      <ul class="menu">
+        <li>&copy; Charlotte Cross 2025. All rights reserved.</li>
+      </ul>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Theme Toggle (shared) -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const themeToggle = document.getElementById("theme-toggle");
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+        themeToggle.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+
+        themeToggle.addEventListener("click", () => {
+          const currentTheme = document.documentElement.getAttribute("data-theme");
+          const newTheme = currentTheme === "dark" ? "light" : "dark";
+          document.documentElement.setAttribute("data-theme", newTheme);
+          localStorage.setItem("theme", newTheme);
+          themeToggle.textContent = newTheme === "dark" ? "☀️" : "🌙";
+        });
+      });
+    </script>
+  </body>
+</html>
