@@ -1,75 +1,107 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Big Picture by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+  <head>
+    <title>Charli's Teaching Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<!-- Header -->
-			<header id="header">
-				<h1>Charli's Teaching Portfolio</h1>
-    <!--Navigation menu section -->
-<nav>
-    <div class="container">
-        <ul>
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <!-- Font Awesome for social icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+
+  <body class="is-preload">
+    <!-- Header -->
+    <header id="header">
+      <h1>Charli's Teaching Portfolio</h1>
+      <div class="theme-toggle-container">
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+
+      <!--Navigation menu section -->
+      <nav>
+        <div class="container">
+          <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="teaching.html">Teaching Philosphy</a></li>
             <li><a href="worksamples.html">Samples of Work</a></li>
             <li><a href="resume.html">Resume</a></li>
             <li><a href="contact.html">Contact Me</a></li>
-        </ul>
-    </div>
-</nav>
-			</header>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-		<!-- Intro -->
-			<section id="intro" class="main style1 dark fullscreen">
-				<div class="content">
-					<header>
-						<h2>Hi! I'm Charlotte Cross!</h2>
-					</header>
-					<p>Welcome to my <strong>Home Page</strong> of my website. <br />
-					Here you will find everything about me and my teaching that you will need.</p>
-					<footer>
-						<a href="#one" class="button style2 down">More</a>
-					</footer>
-				</div>
-			</section>
+    <!-- Intro -->
+    <section id="intro" class="main style1 dark fullscreen"
+      style="
+        background-image: url('images/homepage.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      ">
+      <div class="content">
+        <header>
+          <h2>Hi! I'm Charlotte Cross!</h2>
+        </header>
+        <p>
+          Welcome to my <strong>Home Page</strong> of my website. <br />
+          Here you will find everything about me and my teaching that you will need.
+        </p>
+        <footer>
+          <a href="#one" class="button style2 down">More</a>
+        </footer>
+      </div>
+    </section>
 
-		<!-- Footer -->
-			<footer id="footer">
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="icons">
+        <li><a href="#" class="icon brands fa-twitter"></a></li>
+        <li><a href="#" class="icon brands fa-facebook-f"></a></li>
+        <li><a href="#" class="icon brands fa-instagram"></a></li>
+        <li><a href="#" class="icon brands fa-linkedin-in"></a></li>
+        <li><a href="#" class="icon brands fa-pinterest"></a></li>
+      </ul>
 
-				<!-- Icons -->
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-					</ul>
+      <ul class="menu">
+        <li>&copy; Charlotte Cross 2025. All rights reserved.</li>
+      </ul>
+    </footer>
 
-				<!-- Menu -->
-					<ul class="menu">
-						<li>&copy; Charlotte Cross 2025. All Rights Reserved.</li>
-					</ul>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
-			</footer>
+    <!-- === Theme Toggle Script === -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const themeToggle = document.getElementById("theme-toggle");
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+        themeToggle.textContent = savedTheme === "dark" ? "☀️" : "🌙";
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/js.themetoggle.js"></script>
-
-	</body>
+        themeToggle.addEventListener("click", () => {
+          const currentTheme = document.documentElement.getAttribute("data-theme");
+          const newTheme = currentTheme === "dark" ? "light" : "dark";
+          document.documentElement.setAttribute("data-theme", newTheme);
+          localStorage.setItem("theme", newTheme);
+          themeToggle.textContent = newTheme === "dark" ? "☀️" : "🌙";
+        });
+      });
+    </script>
+  </body>
 </html>

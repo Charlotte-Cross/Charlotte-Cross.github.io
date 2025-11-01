@@ -1,18 +1,29 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Big Picture by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="stylesheet" href="assets/css/overrides.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+  <head>
+    <title>Charli's Teaching Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<!-- Header -->
-			<header id="header">
-				<h1>Charli's Teaching Portfolio</h1>
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <!-- Font Awesome for social icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+
+  <body class="is-preload">
+    <!-- Header -->
+    <header id="header">
+      <h1>Charli's Teaching Portfolio</h1>
+      <div class="theme-toggle-container">
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+      
     <!--Navigation menu section -->
 <nav>
     <div class="container">
@@ -79,35 +90,49 @@
 
 
 
-		<!-- Footer -->
-			<footer id="footer">
+	
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="icons">
+        <li><a href="#" class="icon brands fa-twitter"></a></li>
+        <li><a href="#" class="icon brands fa-facebook-f"></a></li>
+        <li><a href="#" class="icon brands fa-instagram"></a></li>
+        <li><a href="#" class="icon brands fa-linkedin-in"></a></li>
+        <li><a href="#" class="icon brands fa-pinterest"></a></li>
+      </ul>
+	  
+      <ul class="menu">
+        <li>&copy; Charlotte Cross 2025. All rights reserved.</li>
+      </ul>
+    </footer>
 
-				<!-- Icons -->
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-					</ul>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
-				<!-- Menu -->
-					<ul class="menu">
-						<li>&copy; Charlotte Cross 2025. All Rights Reserved.</li>
-					</ul>
+    <!-- === Theme Toggle Script === -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const themeToggle = document.getElementById("theme-toggle");
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+        themeToggle.textContent = savedTheme === "dark" ? "☀️" : "🌙";
 
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
+        themeToggle.addEventListener("click", () => {
+          const currentTheme = document.documentElement.getAttribute("data-theme");
+          const newTheme = currentTheme === "dark" ? "light" : "dark";
+          document.documentElement.setAttribute("data-theme", newTheme);
+          localStorage.setItem("theme", newTheme);
+          themeToggle.textContent = newTheme === "dark" ? "☀️" : "🌙";
+        });
+      });
+    </script>
 
 <!-- Contact form JS -->
 <script>
@@ -143,8 +168,8 @@ document.addEventListener('DOMContentLoaded', function() {
       alert("⚠️ Network error — please check your connection.");
     });
   });
-});
+}); 
 </script>
-
+    
 	</body>
 </html>
